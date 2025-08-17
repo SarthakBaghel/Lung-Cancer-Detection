@@ -1,0 +1,17 @@
+
+.ipynb_checkpoints/
+
+# Ignore virtual environment
+final/
+
+# Ignore model files
+
+cnn_model.h5
+cnn_model.keras
+label_encoders.pkl
+scaler.pkl
+tabular_lung_model.pkl
+
+# Ignore system files
+.DS_Store
+Thumbs.db
