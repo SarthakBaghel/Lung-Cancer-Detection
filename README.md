@@ -12,7 +12,11 @@ A **Streamlit web application** provides a simple and interactive interface for 
 ## 🌐 Live Demo
 (If deployed on Streamlit Cloud, paste your link here)  
 ```
+<<<<<<< HEAD
 https://share.streamlit.io/your-app-link
+=======
+https://lung-cancer-detection-myetsbam3kqsjcytg4pwev.streamlit.app/
+>>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
 ```
 
 ---
@@ -54,7 +58,11 @@ This avoids pushing large model files to GitHub.
 
 ### 1. Clone the repository
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/your-username/your-repo.git
+=======
+git clone https://github.com/SarthakBaghel/Lung-Cancer-Detection.git
+>>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
 cd your-repo
 ```
 
@@ -101,6 +109,7 @@ Pillow==11.3.0
 requests==2.32.4
 ```
 
+<<<<<<< HEAD
 ---
 
 ## 🧠 Model Fusion Logic (High-Level)
@@ -110,6 +119,8 @@ cnn_pred = cnn_model.predict(image_preprocessed)[0][0]
 
 final_score = (0.6 * cnn_pred) + (0.4 * tab_pred)
 ```
+=======
+>>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
 
 ---
 
