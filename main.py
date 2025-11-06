@@ -12,15 +12,29 @@ cnn_model = hf_hub_download(
     repo_id="SarthakBaghel1/lung_cancer",
     filename="cnn_model.h5",
 )
+tabular = hf_hub_download(
+    repo_id="SarthakBaghel1/lung_cancer",
+    filename="tabular_lung_model.pkl",
+)
+scaler = hf_hub_download(
+    repo_id="SarthakBaghel1/lung_cancer",
+    filename="scaler.pkl",
+)
+label_encoders = hf_hub_download(
+    repo_id="SarthakBaghel1/lung_cancer",
+    filename="label_encoders.pkl",
+)
 
 
 cnn_model = tf.keras.models.load_model(cnn_model)
-
+tabular_model = joblib.load(tabular)
+scaler = joblib.load(scaler)
+label_encoders = joblib.load(label_encoders)
 
 # cnn_model = tf.keras.models.load_model('models/cnn_model.h5')
-tabular_model = joblib.load('models/tabular_lung_model.pkl')
-scaler = joblib.load('models/scaler.pkl')
-label_encoders = joblib.load('models/label_encoders.pkl')
+# tabular_model = joblib.load('models/tabular_lung_model.pkl')
+# scaler = joblib.load('models/scaler.pkl')
+# label_encoders = joblib.load('models/label_encoders.pkl')
 
 # Class labels
 tabular_labels = {0: 'Low', 1: 'Medium', 2: 'High'}
