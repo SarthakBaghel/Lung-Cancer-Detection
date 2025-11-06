@@ -7,7 +7,7 @@ import tensorflow as tf
 
 
 # Load models and preprocessors
-cnn_model = tf.keras.models.load_model('cnn_model.keras')
+cnn_model = tf.keras.models.load_model('cnn_model.h5')
 tabular_model = joblib.load('tabular_lung_model.pkl')
 scaler = joblib.load('scaler.pkl')
 label_encoders = joblib.load('label_encoders.pkl')
