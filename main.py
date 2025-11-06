@@ -5,12 +5,22 @@ import pandas as pd
 from PIL import Image
 import tensorflow as tf
 
-
 # Load models and preprocessors
-cnn_model = tf.keras.models.load_model('cnn_model.h5')
-tabular_model = joblib.load('tabular_lung_model.pkl')
-scaler = joblib.load('scaler.pkl')
-label_encoders = joblib.load('label_encoders.pkl')
+from huggingface_hub import hf_hub_download
+
+cnn_model = hf_hub_download(
+    repo_id="SarthakBaghel1/lung_cancer",
+    filename="cnn_model.h5",
+)
+
+
+cnn_model = tf.keras.models.load_model(cnn_model)
+
+
+# cnn_model = tf.keras.models.load_model('models/cnn_model.h5')
+tabular_model = joblib.load('models/tabular_lung_model.pkl')
+scaler = joblib.load('models/scaler.pkl')
+label_encoders = joblib.load('models/label_encoders.pkl')
 
 # Class labels
 tabular_labels = {0: 'Low', 1: 'Medium', 2: 'High'}
