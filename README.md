@@ -4,20 +4,14 @@ This project implements a **multimodal lung cancer prediction system** combining
 - A **tabular ML model** (Logistic Regression + StandardScaler)
 - A **CNN model** trained on lung CT images
 
-The final prediction is obtained using a weighted fusion of both model outputs.  
+The final prediction is obtained using a weighted fusion of both model outputs.
 A **Streamlit web application** provides a simple and interactive interface for users to upload data and view predictions.
 
 ---
 
 ## 🌐 Live Demo
-(If deployed on Streamlit Cloud, paste your link here)  
-```
-<<<<<<< HEAD
-https://share.streamlit.io/your-app-link
-=======
-https://lung-cancer-detection-myetsbam3kqsjcytg4pwev.streamlit.app/
->>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
-```
+
+[View the Live Application](https://lung-cancer-detection-myetsbam3kqsjcytg4pwev.streamlit.app/)
 
 ---
 
@@ -56,14 +50,11 @@ This avoids pushing large model files to GitHub.
 
 ## 🚀 Running Locally
 
-### 1. Clone the repository
+### 1. Clone the Repository
+
 ```bash
-<<<<<<< HEAD
-git clone https://github.com/your-username/your-repo.git
-=======
 git clone https://github.com/SarthakBaghel/Lung-Cancer-Detection.git
->>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
-cd your-repo
+cd Lung-Cancer-Detection
 ```
 
 ### 2. Create & activate virtual environment
@@ -109,18 +100,21 @@ Pillow==11.3.0
 requests==2.32.4
 ```
 
-<<<<<<< HEAD
 ---
 
-## 🧠 Model Fusion Logic (High-Level)
+## 🧠 Model Fusion Logic
+
+The final prediction combines both models with weighted averaging:
+
 ```python
 tab_pred = tabular_model.predict_proba(data)[0][1]
 cnn_pred = cnn_model.predict(image_preprocessed)[0][0]
 
 final_score = (0.6 * cnn_pred) + (0.4 * tab_pred)
 ```
-=======
->>>>>>> 27885e44c0eb35a6176f13d0dc9d6f92bc9d7737
+
+- **CNN weight (60%)**: Primary prediction from imaging analysis
+- **Tabular weight (40%)**: Secondary prediction from clinical/tabular features
 
 ---
 
